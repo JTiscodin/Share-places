@@ -20,14 +20,15 @@ const PlacesList = (props) => {
       {props.items.map((each) => {
         return (
           <PlaceItem
-            key={each.id}
-            id={each.id}
-            image={each.imageUrl}
+            key={each._id}
+            id={each._id}
+            image={each.image}
             title={each.title}
             description={each.description}
             address={each.address}
             creatorId={each.creator}
             coordinates={each.location}
+            onDelete={props.onDeletePlace}
           />
         );
       })}
